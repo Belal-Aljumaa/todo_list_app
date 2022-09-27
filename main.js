@@ -22,6 +22,7 @@ filters.forEach((element) => {
   });
 });
 
+// Add the Task
 const showTodo = (filter) => {
   let divTag = "";
   if (todos) {
@@ -41,7 +42,7 @@ const showTodo = (filter) => {
                         Edit
                       </span>
                       <span onclick='deleteTask(${id}, "${filter}")'>
-                        <i class="fa-regular fa-trash-can"></i>
+                        <i class="fa-solid fa-trash trash-ican"></i>
                       </span>
                     </div>
                   </div>`;
@@ -49,6 +50,10 @@ const showTodo = (filter) => {
     });
   }
   taskBox.innerHTML = divTag || `<span style="font-size: 20px;">You don't have any task here</span>`;
+  let checkTask = taskBox.querySelectorAll(".task");
+  !checkTask.length
+    ? delAll.classList.remove("active")
+    : delAll.classList.add("active");
   calculateTasks();
 };
 showTodo("all");

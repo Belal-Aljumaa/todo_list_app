@@ -55,7 +55,7 @@ body {
   color: #009688;
   font-size: 40px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .container .task-input .plus:hover {
@@ -83,14 +83,21 @@ body {
 
 .controls .del-all {
   border: none;
+  opacity: 0.5;
   outline: none;
   cursor: pointer;
   font-size: 20px;
   padding: 10px 15px;
   border-radius: 5px;
+  pointer-events: none;
   color: #444;
   background: linear-gradient(145deg, rgb(255, 159, 159) 10%, red 100%);
   transition: 0.3s ease;
+}
+
+.del-all.active {
+  opacity: 0.9;
+  pointer-events: auto;
 }
 
 .controls .del-all:active {
@@ -101,8 +108,11 @@ body {
   margin-top: 10px;
   margin-right: 5px;
   padding: 10px;
+}
+
+.task-box {
   overflow-y: auto;
-  max-height: 300px;
+  max-height: 400px;
 }
 
 ::-webkit-scrollbar {
@@ -167,11 +177,9 @@ body {
 }
 
 .container .task-box .settings span {
-  cursor: pointer;
-}
-
-.container .task-box .settings span:first-child {
   font-size: 22px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .container .task-box .settings span:last-child {
@@ -205,4 +213,50 @@ body {
 
 .container .task-stats .tasks-completed span {
   background-color: #009688;
+}
+
+@media (max-width: 800px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .container {
+    padding: 20px 0;
+  }
+
+  .controls .del-all {
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .filters span {
+    margin: 0 5px;
+    font-size: 18px;
+  }
+
+  .task-input {
+    padding: 10px 20px;
+  }
+
+  .controls {
+    padding: 10px 10px;
+  }
+
+  .task-box {
+    margin-top: 20px;
+    margin-right: 5px;
+    padding: 0 15px 10px 20px;
+  }
+
+  .task label input {
+    margin-top: 4px;
+  }
+
+  .settings span {
+    font-size: 18px;
+  }
+
+  .task-stats {
+    font-size: 18px;
+  }
 }
