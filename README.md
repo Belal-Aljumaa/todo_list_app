@@ -5,12 +5,12 @@ In the "To-do list"  Project, you'll build a simple To-do list that you can use 
 
 Clone the repo and launch the html file in the browser
 ```
-
+git@github.com:Belal-Aljumaa/todo_list_app.git
 ```
 
 ## Live Website
 
-💻 Check the live website from [here]()
+💻 Check the live website from [here](https://belal-aljumaa.github.io/todo_list_app/)
 
 ## Design Previews
 
