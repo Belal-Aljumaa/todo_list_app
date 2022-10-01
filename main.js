@@ -57,7 +57,7 @@ const showTodo = (filter) => {
   calculateTasks();
 };
 showTodo("all");
-
+let name1 = ""
 // Check of the Task Status
 const updateStatus = (selectedTask) => {
   let taskName = selectedTask.parentElement.lastElementChild;

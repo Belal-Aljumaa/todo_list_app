@@ -14,7 +14,7 @@ git@github.com:Belal-Aljumaa/todo_list_app.git
 
 ## Design Previews
 
-| [🖥️ Desktop Preview]() | [📱 Mobile Preview]() |
+| [🖥️ Desktop Preview](images/To-Do-List-App.png) | [📱 Mobile Preview](images/To-Do-List-App2.png) |
 | -------------------------------------------------- | ----------------------------------------------- |
 
 ## Used Technologies
